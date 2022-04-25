@@ -1,3 +1,7 @@
+provider "aws" {
+  region = var.region
+}
+
 resource "aws_s3_account_public_access_block" "global" {
   block_public_acls       = var.blockPubAcl
   block_public_policy     = var.blockPubPol
